@@ -1,0 +1,63 @@
+<form (ngSubmit)="onSubmit()">
+  <label for="firstName">First Name</label>
+  <input
+    type="text"
+    id="firstName"
+    name="first_name"
+    placeholder="Enter First Name"
+    [(ngModel)]="firstName"
+  />
+
+  <label for="lastName">Last Name</label>
+  <input
+    type="text"
+    id="lastName"
+    name="lastName"
+    placeholder="Enter Last Name"
+    [(ngModel)] = "lastName"
+  />
+
+  <div class="radio-group">
+    <span>Gender:</span><br />
+    <input
+      type="radio"
+      id="Male"
+      name="gender"
+      value="Male"
+      [(ngModel)] = "gender"
+    />
+    <label for="Male">Male</label>
+    <input
+      type="radio"
+      id="FeMale"
+      name="gender"
+      value="Female"
+       [(ngModel)] = "gender"
+    />
+    <label for="FeMale">Female</label>
+  </div>
+
+  <!-- <div class="checkbox-group">
+    <span>Technologies:</span>
+
+    <div *ngFor="let tech of technologiesList; let i = index">
+      <input
+        type="checkbox"
+        [id]="'tech-' + tech.toLowerCase()"
+        [value]="tech"
+        (change)="onCheckboxChange($event)"
+      />
+      <label [for]="'tech-' + tech.toLowerCase()">{{ tech }}</label>
+    </div>
+  </div>
+
+  <div class="dropdown-group">
+    <label for="semester">Select Semester:</label>
+    <select id="semester" formControlName="semester" required>
+      <option value="" disabled selected>-- choose semester --</option>
+      <option *ngFor="let sem of semestors" [value]="sem">{{ sem }}</option>
+    </select>
+  </div> -->
+
+  <button type="submit">Submit</button>
+</form>
