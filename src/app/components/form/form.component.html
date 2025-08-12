@@ -46,9 +46,21 @@
 
   <div class="radio-group">
     <span>Gender:</span><br />
-    <input type="radio" id="male" name="gender" value="Male" formControlName="gender" />
+    <input
+      type="radio"
+      id="male"
+      name="gender"
+      value="Male"
+      formControlName="gender"
+    />
     <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" value="Female" formControlName="gender" />
+    <input
+      type="radio"
+      id="female"
+      name="gender"
+      value="Female"
+      formControlName="gender"
+    />
     <label for="female">Female</label>
   </div>
 
@@ -64,6 +76,14 @@
       />
       <label [for]="'tech-' + tech.toLowerCase()">{{ tech }}</label>
     </div>
+  </div>
+
+  <div class="dropdown-group">
+    <label for="semester">Select Semester:</label>
+    <select id="semester" formControlName="semester" required>
+      <option value="" disabled selected>-- choose semester --</option>
+      <option *ngFor="let sem of semestors" [value]="sem">{{ sem }}</option>
+    </select>
   </div>
 
   <button type="submit">Submit</button>

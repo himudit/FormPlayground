@@ -8,6 +8,9 @@ import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@ang
 })
 export class FormComponent {
   technologiesList = ['JS', 'Java', 'Angular', 'React', 'Vue'];
+  semestors = [1, 2, 3, 4, 5, 6, 7, 8];
+  selectedSemester: number | null = null;
+
   constructor(private fb: FormBuilder) { }
 
   formData = this.fb.group({
@@ -17,7 +20,8 @@ export class FormComponent {
     password: ['', [Validators.required, Validators.minLength(8)]],
     age: [null],
     gender: [''],
-    technology: this.fb.array([], Validators.required)
+    technology: this.fb.array([], Validators.required),
+    semester: ['', Validators.required]
   })
 
   onCheckboxChange(e: Event) {
