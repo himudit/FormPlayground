@@ -1,0 +1,70 @@
+<form [formGroup]="formData" (ngSubmit)="onSubmit()">
+  <label for="first_name">First Name</label>
+  <input
+    type="text"
+    id="first_name"
+    name="first_name"
+    placeholder="Enter First Name"
+    formControlName="first_name"
+  />
+
+  <label for="last_name">Last Name</label>
+  <input
+    type="text"
+    id="last_name"
+    name="last_name"
+    placeholder="Enter Last Name"
+    formControlName="last_name"
+  />
+
+  <label for="email">Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Enter email address"
+    formControlName="email"
+  />
+
+  <label for="password">Password</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="Enter password"
+    formControlName="password"
+  />
+
+  <label for="age">Age</label>
+  <input
+    type="number"
+    id="age"
+    name="age"
+    placeholder="Enter age"
+    formControlName="age"
+  />
+
+  <div class="radio-group">
+    <span>Gender:</span><br />
+    <input type="radio" id="male" name="gender" value="Male" formControlName="gender" />
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female" formControlName="gender" />
+    <label for="female">Female</label>
+  </div>
+
+  <div class="checkbox-group">
+    <span>Technologies:</span>
+
+    <div *ngFor="let tech of technologiesList; let i = index">
+      <input
+        type="checkbox"
+        [id]="'tech-' + tech.toLowerCase()"
+        [value]="tech"
+        (change)="onCheckboxChange($event)"
+      />
+      <label [for]="'tech-' + tech.toLowerCase()">{{ tech }}</label>
+    </div>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

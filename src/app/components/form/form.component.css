@@ -1,0 +1,74 @@
+/* General form layout */
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Text, email, number, password inputs */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Radio and checkbox styling */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Group radios and checkboxes neatly */
+.radio-group,
+.checkbox-group {
+  margin-bottom: 12px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* Optional: style for submit button */
+button {
+  background: #007BFF;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkbox-group label {
+  margin-left: 4px;
+}
